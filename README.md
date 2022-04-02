@@ -31,4 +31,14 @@
     })
 ```
 3. Transition
+```bash
+  const [isPending, startTransition] = useTransition();
+  
+  const onChangeValue = (e) => {
+    setValue(e.target.value);
+    startTransition(() => {
+      setFilteredValue((e.target.value))
+    })
+  }
+```
 
